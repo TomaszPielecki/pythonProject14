@@ -1,0 +1,50 @@
+Zadanie 5
+rok = int(input("Podaj Rok: "))
+if ((rok % 4 == 0) and (rok % 100 != 0)) or (rok % 400 == 0):
+   print("Rok jest rokiem przestępnym")
+else:
+   print("Rok nie jest rokiem przestępnym")
+zadanie 6
+a=int(input("podaj cyfre "))
+b=int(input("podaj cyfre "))
+c=int(input("podaj cyfre "))
+lista=[]
+lista.append(int(a))
+lista.append(int(b))
+lista.append(int(c))
+print("Wprowadzone cyfry",lista)
+b=lista;lista.reverse()
+print("Nie malejaco",b)
+zadanie 7
+import random
+losowaLiczba = random.randint(1, 10)
+podanaLiczba = int(input("Podaj liczbę całkowitą: "))
+print("wylosowana liczba to --->", losowaLiczba)
+print(losowaLiczba)
+if losowaLiczba == podanaLiczba:
+         print ("Odgadłeś wylosowaną liczbę!!!")
+else:
+         if losowaLiczba > podanaLiczba:
+                   print("Wylosowana liczba jest większa od twojej!!!")
+         else:
+                   if losowaLiczba < podanaLiczba:
+                             print("Wylosowana liczba jest mniejsza od podanej")
+
+
+zadanie 4
+def dzielniki(x):
+    b = []
+    for a in range(1, (int(x/2) + 1)):
+        if x % a == 0:
+            b.append(a)
+    return b
+print("Program sprawdzajacy czy liczba n jest doskonala")
+print("Podaj liczbę n: ")
+n = int(input())
+suma = 0
+iloczyn = 1
+for i in dzielniki(n):
+    suma += i #zliczamy sume
+    iloczyn *= i #i iloczyn dzielnikow
+print ("Liczba " + str(n) + ("" if (suma == n) else " nie") + " jest liczba doskonala pierwszego stopnia")
+print ("Liczba " + str(n) + ("" if (iloczyn == n) else " nie") + " jest liczba doskonala drugiego stopnia")
